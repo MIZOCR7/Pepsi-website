@@ -1,25 +1,22 @@
 *{
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
 }
 
 body{
   font-family: "Roboto", sans-serif;
-  overflow-x: hidden;
+  overflow-x: border-box;
 }
 
 #home{
-  min-height: 100vh;
+  height: 100vh;
   background: #0162be;
   color: #fff;
 }
 
 .container{
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-  height: 100%;
+  margin: 0 7rem;
+  height: 100%
 }
 
 ul {
@@ -96,14 +93,9 @@ nav .logo{
   border: 1px solid;
 }
 
-img{
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
 .social{
   margin-left: 3rem;
+  
 }
 .social i{
   color: #fff;
@@ -156,14 +148,12 @@ img{
   
   
   #home .content .content-text p{
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
+    width: 100px;
   }
   #home .content img{
-    width: 220px;
-    max-width: 100%;
+    width: 100px;
     margin-bottom: 10px;
+    
   }
   .social{
     margin-left: 0;
@@ -174,26 +164,39 @@ img{
 @media (max-width: 600px) {
   nav{
     display: block;
-    text-align: center;
   }
   nav .logo{
     display: block;
     margin: 0 auto 15px;
   }
   nav ul{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
     justify-content: center;
   }
   nav ul a{
-    display: inline-block;
     font-size: 12px;
-    padding: 8px 10px;
   }
   .pepsi-types{
     margin-top: 15px;
-    width: 100px;
   }
+}
+
+.pepsi-image:hover{
+  cursor: pointer;  
+}
+
+.black-can:hover{
+  cursor: pointer;
+}
+
+.white-can:hover{
+  cursor: pointer;
+}
+
+#pepsi-image, #black-can, #white-can {
+    transition: transform 0.4s ease, filter 0.4s ease;
+    cursor: pointer;
+}
+
+#home {
+    transition: background 0.5s ease;
 }
