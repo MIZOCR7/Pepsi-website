@@ -1,21 +1,25 @@
 *{
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 body{
   font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
 }
 
 #home{
-  height: 100vh;
+  min-height: 100vh;
   background: #0162be;
   color: #fff;
 }
 
 .container{
-  margin: 0 7rem;
-  height: 100%
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  height: 100%;
 }
 
 ul {
@@ -56,6 +60,8 @@ nav .logo{
 
 #home .content img{
   width: 220px;
+  animation: animation1 1s ease-out;
+  
 }
 
 #home .content .content-text h1{
@@ -81,6 +87,7 @@ nav .logo{
   background-color: #fff;
   border-radius: 30px;
   color: black;
+  transition: all 0.2s;
 }
 
 .btn:hover{
@@ -89,12 +96,104 @@ nav .logo{
   border: 1px solid;
 }
 
+img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 .social{
   margin-left: 3rem;
-  
 }
 .social i{
   color: #fff;
   font-size: 25px;
   margin: 10px 0;
+}
+
+.pepsi-types{
+  width: 100px;
+  display: block;
+  margin: auto;
+  animation: animation2 1s ease-out;
+}
+
+
+@keyframes animation1{
+  0%{
+    transform: translateX(500px)
+  }
+  100%{
+    transform: translateX(0)
+  }
+}
+
+@keyframes animation2{
+  0%{
+    transform: translateY(200px)
+  }
+  100%{
+    transform: translateY(0)
+  }
+}
+
+@media (max-width: 900px){
+  .container{
+    margin: 0 1rem;
+  }
+  nav ul a{
+    padding: 10px;
+  }
+  #home .content{
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 0 0;
+    
+  }
+  #home .content .content-text{
+    margin-bottom: 2rem;
+  }
+  
+  
+  #home .content .content-text p{
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  #home .content img{
+    width: 220px;
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+  .social{
+    margin-left: 0;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  nav{
+    display: block;
+    text-align: center;
+  }
+  nav .logo{
+    display: block;
+    margin: 0 auto 15px;
+  }
+  nav ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+  nav ul a{
+    display: inline-block;
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+  .pepsi-types{
+    margin-top: 15px;
+    width: 100px;
+  }
 }
