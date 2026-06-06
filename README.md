@@ -1,4 +1,4 @@
-Pepsi Website 🥤
+## Pepsi Website 
 A simple, interactive two-page landing page built for a Pepsi showcase project.
 
 Features
